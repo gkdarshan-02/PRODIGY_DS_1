@@ -1,0 +1,42 @@
+# Global Population Distribution (World Bank WDI)
+
+This project analyzes the distribution of total population by country using the World Bank World Development Indicators dataset for the indicator `SP.POP.TOTL` ("Population, total").
+
+The analysis focuses on:
+- How country populations are distributed globally.
+- Which countries dominate the global population in the latest year available. 
+
+## Repository Structure
+
+- `API_SP.POP.TOTL_DS2_en_csv_v2_321661.csv`  
+  Raw World Bank export containing total population by country and year. 
+
+- `population_distribution.ipynb`  
+  Jupyter notebook that:
+  - Loads and cleans the dataset.  
+  - Selects the latest available year.  
+  - Builds a histogram of country populations (log scale).  
+  - Builds a bar chart of the top 15 most populous countries.  
+  - Exports a high-quality combined figure as `population_histogram_bar.png`.
+
+- `population_analysis.py`  
+  Standalone Python script that performs the same analysis and regenerates the figure for automation/CI workflows. 
+
+- `population_histogram_bar.png`  
+  High-resolution image showing:
+  - Left: distribution of country populations across all countries.  
+  - Right: top 15 countries by total population in the latest year. 
+
+## How to Run
+
+1. Install dependencies: 
+2. Ensure `API_SP.POP.TOTL_DS2_en_csv_v2_321661.csv` is in the project root. 
+3. To regenerate the figure via script:
+
+4. To explore interactively:
+- Open `population_distribution.ipynb` in Jupyter.
+- Run all cells to reproduce the histogram and bar chart and save `population_histogram_bar.png`. 
+
+
+
+
